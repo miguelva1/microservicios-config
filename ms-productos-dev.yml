@@ -18,12 +18,11 @@ spring:
       path: /h2-console
 
 app:
+  jwt:
+    secret: ${JWT_SECRET:MTIzNDU2Nzg5MDEyMzQ1Njc4OTAxMjM0NTY3ODkwMTIzNDU2Nzg=}
+    expiration: 86400000
   services:
     auth-url: http://localhost:8081
-  security:
-    jwt:
-      secret: ${JWT_SECRET:your-secret-key}
-      expiration: 86400000
   productos:
     stock:
       minimo: 10
